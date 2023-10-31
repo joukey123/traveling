@@ -1,4 +1,5 @@
 import express from "express";
+import globalRouter from "./router/globalRouter";
 
 const PORT = 4000;
 const app = express();
@@ -7,9 +8,6 @@ const handleListening = () => {
   console.log(`Server : 🚀 http://localhost:${PORT}`);
 };
 
-const handleHome = (req, res) => {
-  return res.send("<h1>home</h1>");
-};
+app.use("/", globalRouter);
 
-app.get("/", handleHome);
 app.listen(PORT, handleListening);
