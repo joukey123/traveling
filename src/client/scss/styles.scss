@@ -1,5 +1,17 @@
-@import "./_variables";
+@import "./config/variables.scss";
+@import "./config/reset.scss";
+
+
+// components 
+@import "./components/header.scss";
+@import "./components/mainBanner.scss";
+
 body {
-    background-color: tomato;
-    color: white;
+ max-width: 1440px;
+ background-color: $white;
+ margin: 0 auto;
+ color: $black;
+ font-size: 17px;
 }
+
+

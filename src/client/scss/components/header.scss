@@ -1,0 +1,67 @@
+#header {
+    display: flex;
+    background-color: aquamarine;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 1440px;
+    z-index: 1;
+    
+    #logo {
+        font-size: 2rem;
+        width: 20%;
+        text-align: center;
+    }
+    #nav {
+        width: 50%;
+        background-color: beige;
+        ul {
+            display: flex;
+            li {
+                padding: 1.5rem 1rem;
+                width: 7rem;
+                text-align: center;
+                position: relative;
+                .underline {
+                    background-color: black;
+                    width: 1%;
+                    height: .15rem;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transition: transform .5s ease-in-out;
+                    visibility: hidden;
+                }
+            }
+            li:hover .underline{
+                transform: scaleX(100);
+                visibility: visible;
+            }
+        }
+    }
+    #user {
+        width: 30%;
+        ul {
+            display: flex;
+            justify-content: end;
+            li {
+                padding: 1.5rem 2rem;
+                
+            }
+            li:last-child {
+                background-color: $main;
+                color:$white;
+                font-weight: bold;
+
+            }
+            li:last-child:hover{
+                transition: all .2s ease-in-out;
+                background-color: $white;
+                color: $main;
+
+            }
+        }
+    }
+
+}

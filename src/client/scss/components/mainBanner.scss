@@ -1,0 +1,74 @@
+.mainBanner {
+    margin-top: 4rem;
+    max-width: inherit;
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+    .mainBanner__contents {
+        img {
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+        .mainBanner__text {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(0%,-50%);
+            text-align: center;
+            small {
+                display: block;
+                font-size: 2rem;
+                margin-bottom:.5rem;
+                color: rgba(0,0,0,0.5);
+            }
+            h1{
+                font-size: 3.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                letter-spacing: -.1rem;
+            }
+        }
+    }
+    div:nth-child(3),div:nth-child(4) {
+        color: $black;
+        position: absolute;
+        transform: translate(0,-50%);
+        z-index: 2;
+        cursor: pointer;
+        i {
+            font-size: 3rem;
+            padding: .5rem;
+        }
+    }
+    .prevBtn {
+        top: 50%;
+        left: 3%;
+    }
+    .nextBtn {
+        top: 50%;
+        right: 3%;
+    }
+    .bannerNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        background-color: aqua;
+        width: 100%;
+        transform: translate(-50%,0);
+        div {
+            width: .5rem;
+            height: .5rem;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,1);
+            margin: 1rem;
+        }
+    }
+}

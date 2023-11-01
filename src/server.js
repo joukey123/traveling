@@ -9,6 +9,7 @@ const app = express();
 
 app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views");
+app.use("/img", express.static("img"));
 app.use("/static", express.static("assets"));
 app.use("/", rootRouter);
 app.use("/travel", travelRouter);
