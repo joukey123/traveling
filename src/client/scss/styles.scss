@@ -7,6 +7,8 @@
 // components 
 @import "./components/header.scss";
 @import "./components/mainBanner.scss";
+//screen
+@import "./screen/travel.scss";
 
 body {
  max-width: 1440px;
@@ -16,6 +18,7 @@ body {
  font-size: 17px;
  font-family: 'Gothic A1', sans-serif;
  font-weight: 400;
+ padding: 0 2rem;
 }
 
 .fontWhite {

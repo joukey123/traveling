@@ -5,18 +5,20 @@
     position: fixed;
     top: 0;
     max-width: 1440px;
-    width: 100%;
+    width: calc(100% - 4rem);
     z-index: 1;
-    background-color: aqua;
+    background-color: $white;
+    height: 5rem;
     #logo {
-        width: 20%;
-        text-align: center;
+        width: 10%;
+        text-align: start;
         img {
             width: 7rem;
         }
     }
     #nav {
         width: 50%;
+        justify-content: start;
         ul {
             display: flex;
             li {
@@ -42,7 +44,7 @@
         }
     }
     #user {
-        width: 30%;
+        width: 40%;
         ul {
             display: flex;
             justify-content: end;
