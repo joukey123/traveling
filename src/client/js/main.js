@@ -1,4 +1,5 @@
 import "../scss/styles.scss";
+
 const mainBanner = document.querySelector(".mainBanner");
 const prevBtn = document.querySelector(".prevBtn");
 const nextBtn = document.querySelector(".nextBtn");

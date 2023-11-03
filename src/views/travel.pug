@@ -1,34 +1,43 @@
 extends base
 block contents
-    div.travel
+    div#travel
         div.recCity
             h1.title 추천 도시
             div.recCityContents
                 div.recCityBox
-                    img(src="https://i.namu.wiki/i/P790OUVpJuqrzpxJMlLwE1aZxx6I8X5Tj2HnBNSWSQ7RontGhWFWjtoa8SCUcyDCMHDPfdEwE6InmtZg3AczPCVFFoGnAyteAEEAu4sLQssNtnaV_DhREbuByK0mnYstPiFY3U8msz2EC8uWpLbKmA.webp")
+                    img(src="https://images.unsplash.com/photo-1593755673003-8ca8dbf906c2?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 익스트림 스포츠의 성지
                         h1 퀸즈타운
+                        p 뉴질랜드 남섬을 여행하고 레저를 즐기러 온 전세계의 여행객들의 거점으로 유명하다.
                 div.recCityBox
                     img(src="https://i.namu.wiki/i/P790OUVpJuqrzpxJMlLwE1aZxx6I8X5Tj2HnBNSWSQ7RontGhWFWjtoa8SCUcyDCMHDPfdEwE6InmtZg3AczPCVFFoGnAyteAEEAu4sLQssNtnaV_DhREbuByK0mnYstPiFY3U8msz2EC8uWpLbKmA.webp")
                     div.recCityDef
                         h2 남섬의 관문
                         h1 크라이스트 처치
-                div.recCityBox.big
-                    img(src="https://i.namu.wiki/i/P790OUVpJuqrzpxJMlLwE1aZxx6I8X5Tj2HnBNSWSQ7RontGhWFWjtoa8SCUcyDCMHDPfdEwE6InmtZg3AczPCVFFoGnAyteAEEAu4sLQssNtnaV_DhREbuByK0mnYstPiFY3U8msz2EC8uWpLbKmA.webp")
+                        p 뉴질랜드 남섬으로 가기 위한 여행자들에게 관문 역할하는 도시이다. 현재는 지진이후 복구 작업에 힘쓰고 있다.
+                div.recCityBox.rightbig
+                    img(src="https://images.unsplash.com/photo-1613186656588-15bde9f1c493?auto=format&fit=crop&q=80&w=2664&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 최대의 도시
                         h1 오클랜드
+                        p 뉴질랜드 북섬에 위치한 항구도시로 뉴질랜드의 옛 수도이자 최대도시이다.
                 div.recCityBox
-                    img(src="https://i.namu.wiki/i/P790OUVpJuqrzpxJMlLwE1aZxx6I8X5Tj2HnBNSWSQ7RontGhWFWjtoa8SCUcyDCMHDPfdEwE6InmtZg3AczPCVFFoGnAyteAEEAu4sLQssNtnaV_DhREbuByK0mnYstPiFY3U8msz2EC8uWpLbKmA.webp")
+                    img(src="https://images.unsplash.com/photo-1562106862-55de9842848d?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 뉴질랜드의 수도
                         h1 웰링턴
+                        p 뉴질랜드의 수도이며 국내간 도로, 해안, 항공 교통의 주축이 되는 도시이다.
                 div.recCityBox
-                    img(src="https://i.namu.wiki/i/P790OUVpJuqrzpxJMlLwE1aZxx6I8X5Tj2HnBNSWSQ7RontGhWFWjtoa8SCUcyDCMHDPfdEwE6InmtZg3AczPCVFFoGnAyteAEEAu4sLQssNtnaV_DhREbuByK0mnYstPiFY3U8msz2EC8uWpLbKmA.webp")
+                    img(src="https://images.unsplash.com/photo-1589364902763-41b8c0a099c5?auto=format&fit=crop&q=80&w=2160&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 자연에서 즐기는 온천
                         h1 로토루아
+                        p 마오리족 문화의 중심지이며 화산활동과 호수, 온천이 유명한 관광 도시이다.
             div.prevBtn
+                i.fa-solid.fa-angle-left
             div.nextBtn
-        
+                i.fa-solid.fa-angle-right
+
+block script
+    script(src="/static/js/travel.js")
