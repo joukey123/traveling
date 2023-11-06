@@ -22,7 +22,8 @@
   "homepage": "https://github.com/joukey123/traveling#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "youtube-node": "^1.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",

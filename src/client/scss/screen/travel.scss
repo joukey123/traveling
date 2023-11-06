@@ -1,26 +1,28 @@
 #travel {
     margin-top: 5rem;
-    background-color: aquamarine;
+    // background-color: aquamarine;
     height: 100vh;
+    .title {
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+     }
     .recCity {
         width: 100%;
-        background-color: tomato;
+        // background-color: tomato;
         padding-top: 3rem;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         position: relative;
 
-         .title {
-            font-size: 1.4rem;
-            font-weight: 800;
-         }
+        
          .recCityContents {
             width: 120%;
-            background-color: turquoise;
             display: flex;
             align-items: center;
             align-self: center;
+            padding: 2rem 0;
             .recCityBox {
                 width: 18%;
                 height: 20rem;
@@ -68,19 +70,15 @@
             }
             
           
-            .rightbig{
-                width: 25%;
+            .big{
+                width: 23%;
                 height: 25rem;
                 filter: grayscale(0);
-                animation: rightmove .5s linear;
                 z-index: 1;
+                box-shadow: 1px 1px 5px $alphaBlack;
             }
-            .leftbig{
-                width: 30%;
-                height: 25rem;
-                filter: grayscale(0);
-                animation: leftmove .5s linear;
-            }
+        
+         
 
          }
          .prevBtn, .nextBtn {
@@ -92,45 +90,80 @@
             align-items: center;
             justify-content: center;
             color: $white;
-            box-shadow: 1px 1px 10px $alphaBlack;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
             position: absolute; 
          }
          .prevBtn {
-            top:55%;
-            left: 35%;
-            transform: translate(-50%,-50%);    
+            top:60%;
+            left: 33%;
+            transform: translate(0%,-50%);    
             z-index: 2;        
          }
          .nextBtn {
-            top:55%;
-            right: 38%;
-            transform: translate(-50%,-50%);    
+            top:60%;
+            right: 33%;
+            transform: translate(0%,-50%);    
             z-index: 2;    
          }
     }
+    .recVideo {
+        background-color: blueviolet;
+        height: 10;
+        .revVideoList {
+            display: grid;
+            grid-template-columns: repeat(3,32%);
+            column-gap: 2%;
+            .video-mixin {
+                .video-mixin__thumb {
+                    width: 100%;
+                    height: 15rem;
+                    border-radius: 1rem;
+                    margin-bottom: 1rem;
+                }
+                .video-mixin__data {
+                    display: flex;
+                    flex-direction: column;
+                    .video-mixin__title  {
+                        display: block;
+                        font-size: 1.2rem;
+                        font-weight: 800;
+                        white-space:nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        background-color: aquamarine;
+                        margin-bottom: 1rem;
+                        line-height: 2rem;
+                        
+                    }
+                    .video-mixin__dec{
+                        color: &alphaBlack;
+                        font-size: 1rem;
+                        display: block;
+                        white-space:nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        background-color: aqua;
+                        margin-bottom: .5rem;
+                    }
+                    .video-mixin__meta {
+                        background-color: tomato;
+                        display: flex;
+                        justify-content: space-between;
+                        color: $alphaBlack;
+                    }
+                }
+            }
+           
+        }
+    }
 }
 
-@keyframes rightmove {
-  
-    0%{
-        z-index: 1;
-        transform: scale(0.8) translateX(200px);
-    }
-   
-}
-@keyframes leftmove {
-  
-    0%{
-        
-        transform: scale(0.8) translateX(-200px);
-    }
-   
-}
 
 .imgTextHidden {
     opacity: .5;
     height: 3rem;
     p{
         visibility: hidden;
-    }
+    }  
 }
+

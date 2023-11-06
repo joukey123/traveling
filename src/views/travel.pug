@@ -1,4 +1,6 @@
 extends base
+include mixins/video
+
 block contents
     div#travel
         div.recCity
@@ -38,6 +40,10 @@ block contents
                 i.fa-solid.fa-angle-left
             div.nextBtn
                 i.fa-solid.fa-angle-right
-
+        div.recVideo
+            h1.title 추천 영상
+            div.revVideoList
+                each video in videos
+                    +video(video)
 block script
     script(src="/static/js/travel.js")
