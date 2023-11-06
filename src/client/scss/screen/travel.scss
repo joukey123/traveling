@@ -1,7 +1,6 @@
 #travel {
     margin-top: 5rem;
     // background-color: aquamarine;
-    height: 100vh;
     .title {
         font-size: 1.3rem;
         font-weight: 800;
@@ -15,7 +14,6 @@
         display: flex;
         flex-direction: column;
         position: relative;
-
         
          .recCityContents {
             width: 120%;
@@ -107,12 +105,16 @@
          }
     }
     .recVideo {
-        background-color: blueviolet;
-        height: 10;
+        height: 27rem;
+        position: relative;
+        overflow: hidden;
+        padding: 2rem 0;
+        margin-bottom: 1rem;
         .revVideoList {
             display: grid;
             grid-template-columns: repeat(3,32%);
             column-gap: 2%;
+            row-gap: 6rem;
             .video-mixin {
                 .video-mixin__thumb {
                     width: 100%;
@@ -130,7 +132,6 @@
                         white-space:nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        background-color: aquamarine;
                         margin-bottom: 1rem;
                         line-height: 2rem;
                         
@@ -142,18 +143,33 @@
                         white-space:nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        background-color: aqua;
                         margin-bottom: .5rem;
                     }
                     .video-mixin__meta {
-                        background-color: tomato;
                         display: flex;
                         justify-content: space-between;
                         color: $alphaBlack;
+                        font-size: 1rem;
+
                     }
+                   
                 }
             }
            
+        }
+        button {
+            position: absolute;
+            width: 25%;
+            height: 3rem;
+            border: 1px solid $black;
+            bottom: 0%;
+            left: 50%;
+            transform: translate(-50%,0);
+            font-size: 1rem;
+            line-height: 1rem;
+            background-color: transparent;
+            box-shadow: 1px 1px 5px $alphaBlack;
+            cursor: pointer;
         }
     }
 }

@@ -3,9 +3,24 @@ const recCityContents = document.querySelector(".recCityContents");
 const recCityBoxs = document.querySelectorAll(".recCityBox");
 const prevBtn = document.querySelector(".prevBtn");
 const nextBtn = document.querySelector(".nextBtn");
+const recVideo = document.querySelector(".recVideo");
+const moreBtn = document.querySelector(".moreBtn");
 const childrens = recCityContents.children;
 
 let imgNum = 0;
+const handlesHideVideo = () => {
+  recVideo.style.height = "27rem";
+  moreBtn.innerText = "더보기";
+  moreBtn.addEventListener("click", handleShowVideo);
+  moreBtn.removeEventListener("click", handlesHideVideo);
+};
+
+const handleShowVideo = () => {
+  recVideo.style.height = "54rem";
+  moreBtn.innerText = "접기";
+  moreBtn.removeEventListener("click", handleShowVideo);
+  moreBtn.addEventListener("click", handlesHideVideo);
+};
 
 //선택된 이미지
 const handleSelectCity = () => {
@@ -50,5 +65,6 @@ const handleNextCity = () => {
 
 handleSelectCity("");
 
+moreBtn.addEventListener("click", handleShowVideo);
 prevBtn.addEventListener("click", handlePrevCity);
 nextBtn.addEventListener("click", handleNextCity);
