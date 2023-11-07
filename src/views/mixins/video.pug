@@ -5,5 +5,4 @@ mixin video(video)
             h1.video-mixin__title #{video["snippet"]["title"]};
             small.video-mixin__dec #{video["snippet"]["description"]};            
             div.video-mixin__meta
-                span #{video["snippet"]["channelTitle"]}
-                span #{video["snippet"]["publishTime"].substr(0,10)}
+                span #{video["snippet"]["channelTitle"]}  |  #{video["snippet"]["publishTime"].substr(0,10)}

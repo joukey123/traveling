@@ -6,19 +6,20 @@ export const travel = (req, res) => {
   const limit = 6;
 
   //   youtube.setKey("AIzaSyBFt0Le4tsDRChIip8_AUevMr7lrt8B9cI"); //크로크무슈
-  youtube.setKey("AIzaSyD-ynXsP4uQ4Mz4nXdz53qwwQ0awljbFdo"); //holland
+  // youtube.setKey("AIzaSyD-ynXsP4uQ4Mz4nXdz53qwwQ0awljbFdo"); //holland
 
-  youtube.addParam("order", "rating");
-  youtube.addParam("type", "video");
-  youtube.addParam("videoLicense", "creativeCommon");
+  // youtube.addParam("order", "rating");
+  // youtube.addParam("type", "video");
+  // youtube.addParam("videoLicense", "creativeCommon");
 
-  youtube.search(word, limit, function (err, result) {
-    if (err) {
-      console.log(err);
-      return;
-    }
+  // youtube.search(word, limit, function (err, result) {
+  //   if (err) {
+  //     console.log(err);
+  //     return;
+  //   }
 
-    const videos = result["items"];
-    res.render("travel", { videos });
-  });
+  //   const videos = result["items"];
+  //   res.render("travel", { videos });
+  // });
+  res.render("travel");
 };

@@ -1,7 +1,11 @@
 $main : #F57444;
-$subY :#CA8A14;
+$subY :rgb(255, 204, 0);
 $subB : #153144;
 $black : #161B1A;
 $white : aliceblue;
 $alphaBlack : rgba(0,0,0,0.3);
 $alphaWhite : rgba(255,255,255,0.3);
+$border: .5px solid $alphaBlack;
+$border-radius: 1rem;
+$box-shadow: 1px 1px px $alphaBlack;
+

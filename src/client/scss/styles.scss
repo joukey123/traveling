@@ -7,23 +7,33 @@
 // components 
 @import "./components/header.scss";
 @import "./components/mainBanner.scss";
+@import "./components/ad.scss";
 //screen
 @import "./screen/travel.scss";
+@import "./screen/working.scss";
 
+:root {
+    font-size: 16px;
+}
 body {
  max-width: 1440px;
- background-color: $white;
  margin: 0 auto;
  color: $black;
- font-size: 17px;
  font-family: 'Gothic A1', sans-serif;
  font-weight: 400;
  padding: 0 2rem;
+ background-color: white;
+
 }
 footer {
     color: $black;
     height:5rem;
 }
+.title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 1.6rem;
+ }
 .fontWhite {
     color:$white;
 

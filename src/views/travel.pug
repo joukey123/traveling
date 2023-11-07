@@ -7,44 +7,93 @@ block contents
             h1.title 추천 도시
             div.recCityContents
                 div.recCityBox
-                    img(src="https://images.unsplash.com/photo-1593755673003-8ca8dbf906c2?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                    img(src="https://images.unsplash.com/photo-1598525024848-f2d50bbbfe03?auto=format&fit=crop&q=80&w=3072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 익스트림 스포츠의 성지
                         h1 퀸즈타운
                         p 뉴질랜드 남섬을 여행하고 레저를 즐기러 온 전세계의 여행객들의 거점으로 유명하다.
                 div.recCityBox
-                    img(src="https://i.namu.wiki/i/P790OUVpJuqrzpxJMlLwE1aZxx6I8X5Tj2HnBNSWSQ7RontGhWFWjtoa8SCUcyDCMHDPfdEwE6InmtZg3AczPCVFFoGnAyteAEEAu4sLQssNtnaV_DhREbuByK0mnYstPiFY3U8msz2EC8uWpLbKmA.webp")
+                    img(src="https://images.unsplash.com/photo-1634348414616-df1cb042b728?auto=format&fit=crop&q=80&w=3085&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 남섬의 관문
                         h1 크라이스트 처치
                         p 뉴질랜드 남섬으로 가기 위한 여행자들에게 관문 역할하는 도시이다. 현재는 지진이후 복구 작업에 힘쓰고 있다.
                 div.recCityBox.rightbig
-                    img(src="https://images.unsplash.com/photo-1613186656588-15bde9f1c493?auto=format&fit=crop&q=80&w=2664&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                    img(src="https://images.unsplash.com/photo-1531274071216-aea6e7a086c7?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG5ld3plYWxhbmR8ZW58MHx8MHx8fDA%3D")
                     div.recCityDef
                         h2 최대의 도시
                         h1 오클랜드
                         p 뉴질랜드 북섬에 위치한 항구도시로 뉴질랜드의 옛 수도이자 최대도시이다.
                 div.recCityBox
-                    img(src="https://images.unsplash.com/photo-1562106862-55de9842848d?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                    img(src="https://images.unsplash.com/photo-1591701729564-3b5325d5a4bd?auto=format&fit=crop&q=80&w=2437&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 뉴질랜드의 수도
                         h1 웰링턴
                         p 뉴질랜드의 수도이며 국내간 도로, 해안, 항공 교통의 주축이 되는 도시이다.
                 div.recCityBox
-                    img(src="https://images.unsplash.com/photo-1589364902763-41b8c0a099c5?auto=format&fit=crop&q=80&w=2160&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                    img(src="https://images.unsplash.com/photo-1533558837877-f9a97ac5ba0c?auto=format&fit=crop&q=80&w=2832&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                     div.recCityDef
                         h2 자연에서 즐기는 온천
                         h1 로토루아
                         p 마오리족 문화의 중심지이며 화산활동과 호수, 온천이 유명한 관광 도시이다.
-            div.prevBtn
-                i.fa-solid.fa-angle-left
-            div.nextBtn
-                i.fa-solid.fa-angle-right
+            div.recCityBtn
+                div.prevBtn
+                    i.fa-solid.fa-angle-left
+                div.nextBtn
+                    i.fa-solid.fa-angle-right
         div.recVideo
             h1.title 추천 영상
             div.revVideoList
-                each video in videos
-                    +video(video)
+                //- each video in videos
+                //-     +video(video)
             button.moreBtn 더보기
+        div.userTravel
+            h1.title 여행 후기
+            div.userTravel-list
+                div.userTravel-component
+                    div.userTravel-img
+                        img(src="https://www.skylineluge.kr/media/5627/skyline-luge-busan_three-friends-luging.GLDUtg.jpg?width=1900")
+                    div.userTravel-text
+                        small 퀸즈타운 / 남섬
+                        h1 [레저] 스피드를 즐길 수 있는 스카이라인 루지
+                        div.userTravel-meta
+                            span 워홀러
+                            span 
+                              i.fa-regular.fa-thumbs-up
+                              span 1,200
+                div.userTravel-component
+                    div.userTravel-img
+                        img(src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?auto=format&fit=crop&q=80&w=2893&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                    div.userTravel-text
+                        small 테카포 호수
+                        h1 밤하늘의 벼얼~⭐️ 은하수가 쏟아짐. 여긴 꼭 가세요!
+                        div.userTravel-meta
+                            span newzealand
+                            span 
+                              i.fa-regular.fa-thumbs-up
+                              span 1,300
+                div.userTravel-component
+                    div.userTravel-img
+                        img(src="https://images.unsplash.com/photo-1519044444158-d7b0e8452004?auto=format&fit=crop&q=80&w=2970&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                    div.userTravel-text
+                        small 오클랜드
+                        h1 오클랜드 시티투어버스! 추웠지만 낭만있던 마지막 밤.
+                        div.userTravel-meta
+                            span 오오휴
+                            span 
+                              i.fa-regular.fa-thumbs-up
+                              span 2,004
+                div.userTravel-component
+                    div.userTravel-img
+                        img(src="https://images.unsplash.com/photo-1697394658115-418b027ff41f?auto=format&fit=crop&q=80&w=3087&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                    div.userTravel-text
+                        small 빙하마을
+                        h1 [🏔️마을] 빙하 마을에서 1박 2일! 헬기타고 설산에 다녀왔어요.
+                        div.userTravel-meta
+                            span 크라운
+                            span 
+                              i.fa-regular.fa-thumbs-up
+                              span 10,200
+                               
 block script
     script(src="/static/js/travel.js")

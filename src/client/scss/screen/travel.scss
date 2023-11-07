@@ -1,37 +1,36 @@
 #travel {
-    margin-top: 5rem;
     // background-color: aquamarine;
-    .title {
-        font-size: 1.3rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-     }
+  
     .recCity {
+        .title {
+            margin-bottom: 0rem;
+        }
         width: 100%;
-        // background-color: tomato;
         padding-top: 3rem;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         position: relative;
+        margin: 6rem  0;
+
+
         
          .recCityContents {
-            width: 120%;
             display: flex;
             align-items: center;
             align-self: center;
             padding: 2rem 0;
             .recCityBox {
-                width: 18%;
+                width: 20rem;
                 height: 20rem;
                 margin-right: 1rem;
                 overflow: hidden;
                 position: relative;
                 margin: 0 1.5rem;
-                filter: grayscale(1);
-                filter: brightness(.2);
-                border-radius: 1.2rem;
+                border: $border;
+                border-radius: $border-radius;
                 img{
+                    width: 100%;
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -67,49 +66,55 @@
                 }
             }
             
-          
             .big{
-                width: 23%;
+                width: 25rem;
                 height: 25rem;
                 filter: grayscale(0);
                 z-index: 1;
-                box-shadow: 1px 1px 5px $alphaBlack;
-            }
-        
-         
-
+            }     
+         }
+         .recCityBtn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 55%;
+            z-index: 98;
          }
          .prevBtn, .nextBtn {
             width: 3rem;
             height: 3rem;
             border-radius: 50%;
-            background-color: $main;
+            background-color: #eee;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: $white;
-            box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
-            position: absolute; 
+            color: $alphaBlack;
+            box-shadow: $box-shadow;
+            // position: absolute; 
+            cursor: pointer;
+            margin: 0 12rem;
          }
-         .prevBtn {
-            top:60%;
-            left: 33%;
-            transform: translate(0%,-50%);    
-            z-index: 2;        
-         }
-         .nextBtn {
-            top:60%;
-            right: 33%;
-            transform: translate(0%,-50%);    
-            z-index: 2;    
-         }
+        //  .prevBtn {
+        //     top:60%;
+        //     left: 31rem;
+        //     transform: translate(0%,-50%);    
+        //     z-index: 2;        
+        //  }
+        //  .nextBtn {
+        //     top:60%;
+        //     right: 31rem;
+        //     transform: translate(0%,-50%);    
+        //     z-index: 2;    
+        //  }
     }
     .recVideo {
-        height: 27rem;
+        height: 28rem;
         position: relative;
         overflow: hidden;
         padding: 2rem 0;
-        margin-bottom: 1rem;
+        margin: 6rem  0;
         .revVideoList {
             display: grid;
             grid-template-columns: repeat(3,32%);
@@ -143,11 +148,9 @@
                         white-space:nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        margin-bottom: .5rem;
+                        margin-bottom: .6rem;
                     }
                     .video-mixin__meta {
-                        display: flex;
-                        justify-content: space-between;
                         color: $alphaBlack;
                         font-size: 1rem;
 
@@ -161,17 +164,80 @@
             position: absolute;
             width: 25%;
             height: 3rem;
-            border: 1px solid $black;
+            border: $border;
             bottom: 0%;
             left: 50%;
             transform: translate(-50%,0);
             font-size: 1rem;
             line-height: 1rem;
             background-color: transparent;
-            box-shadow: 1px 1px 5px $alphaBlack;
             cursor: pointer;
         }
     }
+    .userTravel {
+        margin: 6rem  0;
+
+        .userTravel-list {
+            display: grid;
+            grid-template-columns: repeat(4,21.5rem);
+            column-gap: 2%;
+            .userTravel-component {
+                display: flex;
+                flex-direction: column;
+                border: $border;
+                border-radius: $border-radius;
+                cursor: pointer;
+            }
+            .userTravel-img{
+                width: 100%;
+                height: 14rem;
+                overflow: hidden;
+                position: relative;
+                border-radius: 1rem 1rem 0 0;
+
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    object-fit: cover;
+                }
+            }
+            .userTravel-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 1rem 2rem;
+                small {
+                    font-size: 1rem;
+                    color: $alphaBlack;
+                    margin-bottom: 1rem;
+                }
+                h1 {
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+                }
+                .userTravel-meta {
+                    font-size: 1rem;
+                    color: gray;
+                    display: flex;
+                    span {
+                        width: 45%;
+                        i {
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .userTravel-component:hover img {
+                transform: translate(-50%,-50%) scale(1.1);
+                transition: transform .4s ease-in-out;
+        }
+    }
+   
 }
 
 

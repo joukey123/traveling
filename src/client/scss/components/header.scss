@@ -7,8 +7,9 @@
     max-width: 1440px;
     width: calc(100% - 4rem);
     z-index: 99;
-    background-color: $white;
     height: 5rem;
+    background-color: white;
+    box-shadow: 1px 1px 3px &alphaBlack;
     #logo {
         width: 10%;
         text-align: start;
