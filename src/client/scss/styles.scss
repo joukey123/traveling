@@ -8,6 +8,7 @@
 @import "./components/header.scss";
 @import "./components/mainBanner.scss";
 @import "./components/ad.scss";
+@import "./components/foooter.scss";
 //screen
 @import "./screen/travel.scss";
 @import "./screen/working.scss";
@@ -27,10 +28,7 @@ body {
  background-color: white;
 
 }
-footer {
-    color: $black;
-    height:5rem;
-}
+
 .title {
     font-size: 1.6rem;
     font-weight: 800;

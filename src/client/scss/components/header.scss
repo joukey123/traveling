@@ -6,10 +6,9 @@
     top: 0;
     max-width: 1440px;
     width: calc(100% - 4rem);
-    z-index: 99;
+    z-index: 98;
     height: 5rem;
     background-color: white;
-    box-shadow: 1px 1px 3px &alphaBlack;
     #logo {
         width: 10%;
         text-align: start;
@@ -23,25 +22,27 @@
         ul {
             display: flex;
             li {
-                padding: 1.5rem 1rem;
-                width: 7rem;
                 text-align: center;
                 position: relative;
-                .underline {
-                    background-color: $black;
-                    width: 1%;
-                    height: .15rem;
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transition: transform .3s ease-in-out;
-                    visibility: hidden;
+                a{
+                    display: block;
+                    position: relative;
+                    padding: 1rem 0;
+                    margin: 2rem;
+
                 }
+                
             }
-            li:hover .underline{
-                transform: scaleX(100);
-                visibility: visible;
-            }
+            a:hover  {
+                .underline {
+                width: 0%;
+                border-bottom: 1px solid black;
+                animation: underline .3s ease-in-out forwards;
+                margin-bottom: 1rem;
+                position: absolute;
+                top:70%;
+                left: 0;
+             }           }
         }
     }
     #user {
@@ -50,17 +51,20 @@
             display: flex;
             justify-content: end;
             li {
-                padding: 1rem 2rem;
+                a{
+                    padding: 1rem 2rem;
+                    margin: 1rem;
+                }
                 
             }
-            li:last-child {
+            li:last-child a{
                 background-color: $main;
                 color:$white;
                 font-weight: bold;
                 border-radius: 2rem;
 
             }
-            li:last-child:hover{
+            li:last-child a:hover{
                 transition: all .2s ease-in-out;
                 background-color: $white;
                 color: $main;
@@ -69,4 +73,12 @@
         }
     }
 
+}
+
+@keyframes underline {
+    0% {
+width: 0;
+    }
+    100% {
+width: 100%;    }
 }

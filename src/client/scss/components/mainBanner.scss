@@ -4,6 +4,8 @@
     height: 30rem;
     overflow: hidden;
     position: relative;
+    border-radius: $border-radius;
+
     .mainBanner__contents {
         position: relative;
         width: 100%;

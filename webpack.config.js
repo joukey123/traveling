@@ -10,7 +10,11 @@ module.exports = {
       filename: "css/styles.css",
     }),
   ],
-  entry: { main: BASE_JS + "main.js", travel: BASE_JS + "travel.js" },
+  entry: {
+    main: BASE_JS + "main.js",
+    travel: BASE_JS + "travel.js",
+    together: BASE_JS + "together.js",
+  },
   output: {
     filename: "js/[name].js",
     path: path.resolve(__dirname, "assets"),
