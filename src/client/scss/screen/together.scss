@@ -115,14 +115,15 @@
                         margin-right: .5rem;
                     }
                 }
-                .productlist-price {
-                    font-size: 1rem;
-                    color:$white;
+                .price-box{
                     background-color: $main;
                     padding: .5rem .6rem;
+                    font-size: 1rem;
+                    color:$white;
                     font-weight: 800;
-                    border-radius: .5rem;                    
+                    border-radius: .5rem;   
                 }
+             
             }
         }
         .productlist-component:hover {
@@ -132,7 +133,7 @@
                 transition: all ease-in-out .5s;
 
             }
-            .productlist-price {
+            .price-box {
                 background-color: orange;
                 transition: all ease-in-out .5s;
 
@@ -162,9 +163,8 @@
         left: 50%;
         transform: translate(-50%,-50%);
         position: fixed;
-        cursor: pointer;
         .productlist-img{
-            width: 50%;
+            width: 55%;
             height: 100%;
             overflow: hidden;
             position: relative;
@@ -222,7 +222,6 @@
                 align-items: center;
                 .calender {
                     width: 50%;
-                    background-color: aqua;
                     .monthTitle {
                         display: flex;
                         justify-content: space-around;
@@ -259,19 +258,92 @@
                             cursor: auto;
                           }
                           .selectOn {
-                            background-color: tomato;
+                            background-color: $main;
                             color: white;
-                            width: 30px;
-                            height: 30px;
+                            padding: 5px;
                             border-radius: 50%;
-                            margin: 0 7px;
+                            margin: 0 12px;
                           }
                     }
                 }
                 .people {
                     width: 50%;
                     height: 100%;
-                    background-color: tomato;
+                    .peopleTable {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.2rem;
+                        #adult, #child {
+                            background-color: aliceblue;
+                            width: 80%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 1rem;
+                            border-radius: $border-radius;
+                            margin-top: 1rem;
+                            button {
+                                border: 0;
+                                background:none;
+                            }
+                            h3 {
+                                font-weight: 800;
+                            }
+                            .fa-person, .fa-child{
+                                color: $alphaBlack;
+                                width: 33%;
+                                text-align: center;
+                                font-size: 1.2rem;
+                                span {
+                                    margin-left: .8rem;
+                                    font-weight: 400;
+                                }
+                            }
+                            span:nth-child(2) {
+                                font-size: 1rem;
+                            }
+                        }
+                        #result {
+                            display: flex;
+                            width: 90%;
+                            margin-top: 6rem;
+                            border-top: $border;
+                            padding-top: 1rem;
+                            align-items: center;
+                            .totalPrice {
+                                text-align: center;
+                                width: 40%;
+                                small {
+                                    font-size: .8rem;
+                                    color: $alphaBlack;
+                                }  
+                           }
+                            .btnBox {
+                                width: 60%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                button {
+                                    background: none;
+                                    border: 0;
+                                    padding: .5rem .8rem;
+                                    border-radius: $border-radius;
+                                    font-size: 1rem;
+                                }
+                                .payBtn {
+                                    background-color: $main;
+                                    margin-right: .5rem;
+                                }
+                              
+                                .cartBtn {
+                                    background-color: $subY;
+                                }
+                                
+                            }
+                                               }
+                    }
                 }
                
             }
@@ -293,13 +365,13 @@
                     margin-right: .5rem;
                 }
             }
-            .productlist-price {
-                font-size: 1rem;
-                color:$white;
+            .price-box{
                 background-color: $main;
                 padding: .5rem .6rem;
+                font-size: 1rem;
+                color:$white;
                 font-weight: 800;
-                border-radius: .5rem;                    
+                border-radius: .5rem;   
             }
         }
     }

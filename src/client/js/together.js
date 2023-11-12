@@ -11,13 +11,148 @@ const monthTitle = document.createElement("div");
 //인원선택
 const people = document.createElement("div");
 const peopleTable = document.createElement("div");
-
+const adultDiv = document.createElement("div");
+const childDiv = document.createElement("div");
+const resultPay = document.createElement("div");
 people.className = "people";
+peopleTable.className = "peopleTable";
 reserveBox.appendChild(people);
 people.appendChild(peopleTable);
+peopleTable.appendChild(adultDiv);
+adultDiv.id = "adult";
+peopleTable.appendChild(childDiv);
+childDiv.id = "child";
+peopleTable.appendChild(resultPay);
+resultPay.id = "result";
+const totalDiv = document.createElement("div");
+const reservePrice = document.createElement("h4");
+const reserveDate = document.createElement("small");
 
 const day_han = [`일`, `월`, `화`, `수`, `목`, `금`, `토`];
 let currentDay = new Date();
+let adultNumber = 0;
+let childNumber = 0;
+let totalPrice = 0;
+reservePrice.innerText = "";
+reserveDate.innerText = "";
+
+function paintPeople(clone) {
+  paintAdultPeople(clone);
+  paintChildPeople(clone);
+  paintResultPay(clone);
+}
+function sum(clone) {
+  const adultPrice = parseInt(
+    clone.querySelector(".productlist-price").innerText
+  );
+  const childPrice = adultPrice * 0.8;
+  totalPrice = adultNumber * adultPrice + childNumber * childPrice;
+  reservePrice.innerText = `${totalPrice} $`;
+  totalDiv.appendChild(reservePrice);
+}
+function paintResultPay(clone) {
+  totalDiv.className = "totalPrice";
+  sum(clone);
+  totalDiv.prepend(reserveDate);
+  resultPay.appendChild(totalDiv);
+  const buttonDiv = document.createElement("div");
+  buttonDiv.className = "btnBox";
+  const payBtn = document.createElement("button");
+  payBtn.className = "payBtn";
+  payBtn.innerText = "결제";
+  const cartBtn = document.createElement("button");
+  cartBtn.className = "cartBtn";
+  cartBtn.innerText = "장바구니";
+  resultPay.appendChild(buttonDiv);
+  buttonDiv.appendChild(payBtn);
+  buttonDiv.appendChild(cartBtn);
+}
+
+function paintChildPeople(clone) {
+  const childIcon = document.createElement("i");
+  childIcon.className = "fa-solid fa-child";
+  const childSpan = document.createElement("span");
+  childSpan.innerText = "어린이";
+  const price = clone.querySelector(".productlist-price");
+  const childPrice = document.createElement("span");
+  childPrice.innerText = `${parseInt(price.innerText * 0.8)} $`;
+  const decreaseBtn = document.createElement("button");
+  const decreaseBtnIcon = document.createElement("i");
+  decreaseBtnIcon.className = "fa-solid fa-minus";
+  decreaseBtn.appendChild(decreaseBtnIcon);
+  const increaseBtn = document.createElement("button");
+  const increaseBtnIcon = document.createElement("i");
+  increaseBtnIcon.className = "fa-solid fa-plus";
+  increaseBtn.appendChild(increaseBtnIcon);
+  const numberBox = document.createElement("div");
+  const number = document.createElement("h3");
+  numberBox.appendChild(number);
+  childIcon.appendChild(childSpan);
+  childDiv.appendChild(childIcon);
+  childDiv.appendChild(childPrice);
+  childDiv.appendChild(decreaseBtn);
+  childDiv.appendChild(numberBox);
+  childDiv.appendChild(increaseBtn);
+  number.innerText = childNumber;
+
+  decreaseBtnIcon.addEventListener("click", (event) => {
+    if (childNumber <= 0) {
+      return 0;
+    } else {
+      childNumber--;
+      number.innerText = childNumber;
+    }
+    sum(event.target.parentNode.offsetParent);
+  });
+  increaseBtnIcon.addEventListener("click", (event) => {
+    childNumber++;
+    number.innerText = childNumber;
+    sum(event.target.parentNode.offsetParent);
+  });
+}
+
+function paintAdultPeople(clone) {
+  const adultIcon = document.createElement("i");
+  adultIcon.className = "fa-solid fa-person";
+  const adultSpan = document.createElement("span");
+  adultSpan.innerText = "성인";
+  const price = clone.querySelector(".productlist-price");
+  const adultPrice = document.createElement("span");
+  adultPrice.innerText = `${price.innerText} $`;
+  const decreaseBtn = document.createElement("button");
+  const decreaseBtnIcon = document.createElement("i");
+  decreaseBtnIcon.className = "fa-solid fa-minus";
+  decreaseBtn.appendChild(decreaseBtnIcon);
+  const increaseBtn = document.createElement("button");
+  const increaseBtnIcon = document.createElement("i");
+  increaseBtnIcon.className = "fa-solid fa-plus";
+  increaseBtn.appendChild(increaseBtnIcon);
+  const numberBox = document.createElement("div");
+  const number = document.createElement("h3");
+  numberBox.appendChild(number);
+  adultIcon.appendChild(adultSpan);
+  adultDiv.appendChild(adultIcon);
+  adultDiv.appendChild(adultPrice);
+  adultDiv.appendChild(decreaseBtn);
+  adultDiv.appendChild(numberBox);
+  adultDiv.appendChild(increaseBtn);
+  number.innerText = adultNumber;
+
+  decreaseBtnIcon.addEventListener("click", (event) => {
+    if (adultNumber <= 0) {
+      return 0;
+    } else {
+      adultNumber--;
+      number.innerText = adultNumber;
+    }
+    sum(event.target.parentNode.offsetParent);
+  });
+  increaseBtnIcon.addEventListener("click", (event) => {
+    adultNumber++;
+    number.innerText = adultNumber;
+    sum(event.target.parentNode.offsetParent);
+  });
+}
 
 function paintCalender() {
   // let arr = "";
@@ -101,36 +236,15 @@ function paintCalender() {
     const li = document.createElement("li");
     calenderTable.append(li);
     li.innerText = i;
-
-    // li.onclick = function (event) {
-    //   if (isClicked === 0) {
-    //     const second_select = document.getElementById("second_select");
-    //     if (second_select === null) {
-    //       li.setAttribute(`class`, `selectOn`);
-    //       li.setAttribute(`id`, `fisrt_select`);
-    //     } else {
-    //       second_select.removeAttribute(`class`, `selectOn`);
-    //       second_select.removeAttribute(`id`, `second_select`);
-    //     }
-
-    //     isClicked = 1;
-    //   } else {
-    //     const fisrt_select = document.getElementById("fisrt_select");
-    //     if (fisrt_select === null) {
-    //       li.setAttribute(`class`, `selectOn`);
-    //       li.setAttribute(`id`, `second_select`);
-    //     } else {
-    //       fisrt_select.removeAttribute(`class`, `selectOn`);
-    //       fisrt_select.removeAttribute(`id`, `fisrt_select`);
-    //     }
-
-    //     isClicked = 0;
-    //   }
-    // };
+    if (i === date) {
+      li.setAttribute(`class`, `selectOn`);
+      li.setAttribute(`id`, `fisrt_select`);
+      reserveDate.innerText = `${year}년 ${month + 1}월 ${date}일`;
+    }
 
     li.onclick = function (event) {
       const fisrt_select = document.getElementById("fisrt_select");
-      const second_select = document.getElementById("second_select");
+      // const second_select = document.getElementById("second_select");
       if (fisrt_select === null) {
         li.setAttribute(`class`, `selectOn`);
         li.setAttribute(`id`, `fisrt_select`);
@@ -140,10 +254,13 @@ function paintCalender() {
         li.setAttribute(`class`, `selectOn`);
         li.setAttribute(`id`, `fisrt_select`);
       }
-      if (fisrt_select !== null && li.innerText === li.innerText) {
-        fisrt_select.removeAttribute(`class`, `selectOn`);
-        fisrt_select.removeAttribute(`id`, `fisrt_select`);
-      }
+      // if (fisrt_select !== null && li.innerText === li.innerText) {
+      //   fisrt_select.removeAttribute(`class`, `selectOn`);
+      //   fisrt_select.removeAttribute(`id`, `fisrt_select`);
+      // }
+      reserveDate.innerText = `${year}년 ${month + 1}월 ${
+        event.target.innerText
+      }일`;
     };
 
     const Checkedday = new Date(year, month, i).getDay(); //요일
@@ -156,7 +273,7 @@ function paintCalender() {
     // arr = arr + " " + i;
   }
 
-  // console.log(year, month, date, day);
+  console.log(year, month, date, day);
   // console.log(arr);
   for (c; c <= 6 - lastday; c++) {
     const last_li = document.createElement("li");
@@ -199,6 +316,7 @@ function handleShowProductDetail() {
   calenderTable.className = "calenderTable";
   monthTitle.className = "monthTitle";
   paintCalender();
+  paintPeople(clone);
   //   body.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
 }
 
