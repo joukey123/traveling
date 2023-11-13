@@ -1,3 +1,5 @@
+import "./db";
+import "./model/User";
 import app from "./server";
 
 const PORT = process.env.PORT || 4000;
