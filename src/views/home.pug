@@ -27,5 +27,16 @@ block contents
             div.circle
             div.circle
             div.circle        
+    div.travel-recCity
+        include partials/city.pug
+    div.advertisement
+        include partials/ad.pug
+    div.together-product
+        include partials/product.pug
+    div.working-tip
+        include partials/workingtip
+
 block script
     script(src="/static/js/main.js")
+    script(src="/static/js/city.js")
+    script(src="/static/js/together.js")

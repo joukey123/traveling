@@ -4,31 +4,38 @@
     justify-content: center;
     position: fixed;
     top: 0;
-    max-width: 1440px;
-    width: calc(100% - 4rem);
+    left: 0;
+    width: 100%;
     z-index: 98;
     height: 5rem;
     background-color: white;
+
+#headerBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
     #logo {
-        width: 10%;
+        width: 15%;
         text-align: start;
         img {
             width: 7rem;
         }
     }
     #nav {
-        width: 50%;
+        width: 55%;
         justify-content: start;
         ul {
             display: flex;
             li {
                 text-align: center;
                 position: relative;
+                margin-right: 2rem;
                 a{
                     display: block;
                     position: relative;
                     padding: 1rem 0;
-                    margin: 2rem;
 
                 }
                 
@@ -46,14 +53,13 @@
         }
     }
     #user {
-        width: 40%;
+        width: 30%;
         ul {
             display: flex;
             justify-content: end;
             li {
                 a{
                     padding: 1rem 2rem;
-                    margin: 1rem;
                 }
                 
             }
@@ -74,7 +80,7 @@
     }
 
 }
-
+}
 @keyframes underline {
     0% {
 width: 0;

@@ -1,4 +1,4 @@
-#travel {
+#travel,.travel-recCity {
     // background-color: aquamarine;
   
     .recCity {
@@ -80,7 +80,7 @@
             justify-content: center;
             position: absolute;
             top: 55%;
-            z-index: 98;
+            z-index: 90;
          }
          .prevBtn, .nextBtn {
             width: 3rem;

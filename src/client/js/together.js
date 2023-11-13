@@ -295,12 +295,16 @@ function preMonth() {
   paintCalender();
 }
 
-function reset() {
-  monthTitle.innerHTML = "";
-  calenderTable.innerHTML = "";
-}
-
+const handleCloseProductDetail = () => {
+  const selectProduct = document.getElementById("selectProduct");
+  const reserveBox = document.getElementById("reserveBox");
+  selectProduct.remove();
+  reset();
+};
 function handleShowProductDetail() {
+  const closeBtn = document.createElement("button");
+  closeBtn.innerText = "X";
+  closeBtn.className = "closeDetailBtn";
   const bgDiv = document.createElement("div");
   bgDiv.id = "selectProduct";
   const clone = this.cloneNode(true);
@@ -308,6 +312,7 @@ function handleShowProductDetail() {
   bgDiv.appendChild(clone);
   //달력
   reserveBox.id = "reserveBox";
+  clone.appendChild(closeBtn);
   const cloneText = clone.querySelector(".productlist-text");
   cloneText.appendChild(reserveBox);
   reserveBox.prepend(calender);
@@ -318,6 +323,20 @@ function handleShowProductDetail() {
   paintCalender();
   paintPeople(clone);
   //   body.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+  closeBtn.addEventListener("click", handleCloseProductDetail);
+}
+
+function reset() {
+  monthTitle.innerHTML = "";
+  calenderTable.innerHTML = "";
+  adultDiv.innerHTML = "";
+  childDiv.innerHTML = "";
+  resultPay.innerHTML = "";
+  adultNumber = 0;
+  childNumber = 0;
+  totalPrice = 0;
+  reservePrice.innerText = "";
+  reserveDate.innerText = "";
 }
 
 for (let product of products) {

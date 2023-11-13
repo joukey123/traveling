@@ -14,6 +14,7 @@ module.exports = {
     main: BASE_JS + "main.js",
     travel: BASE_JS + "travel.js",
     together: BASE_JS + "together.js",
+    city: BASE_JS + "city.js",
   },
   output: {
     filename: "js/[name].js",

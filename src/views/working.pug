@@ -1,53 +1,6 @@
 extends base
 block contents
-    div#tip
-        h1.title 🍀 워홀 TIP
-        div.tip__contents
-            a(href="https://www.newzealand.com/kr/feature/working-in-new-zealand-during-your-holiday/" target="_blank")
-                div.tip__contents-column
-                    div.contents__img
-                        img.color-img(src="/img/work_color.png")
-                        img.gray-img(src="/img/work.png")
-                    div.contents__text
-                        span 일자리
-                        h1 농업 및 관광업
-                        span LEARN MORE
-            a(href="https://www.careers.govt.nz/job-hunting" target="_blank")
-                div.tip__contents-column
-                    div.contents__img
-                        img.color-img(src="./img/cv_color.png")
-                        img.gray-img(src="./img/cv.png")
-                    div.contents__text
-                        span  이력서
-                        h1 CV 작성법
-                        span LEARN MORE
-            a(href="https://www.newzealand.com/kr/trips-and-driving-itineraries/" target="_blank")
-                div.tip__contents-column
-                    div.contents__img
-                        img.color-img(src="./img/travel_color.png")
-                        img.gray-img(src="./img/travel.png")
-                    div.contents__text
-                        span 여행
-                        h1 워홀 여행 TIP
-                        span LEARN MORE
-            a(href="https://www.seek.co.nz/" target="_blank")
-                div.tip__contents-column
-                    div.contents__img
-                        img.color-img(src="./img/job_color.png")
-                        img.gray-img(src="./img/job.png")
-                    div.contents__text
-                        span 구직
-                        h1 구직 사이트
-                        span LEARN MORE
-            a(href="https://overseas.mofa.go.kr/nz-ko/index.do" target="blank")
-                div.tip__contents-column
-                    div.contents__img
-                        img.color-img(src="./img/korea_color.png")
-                        img.gray-img(src="./img/korea.png")
-                    div.contents__text
-                        span 도움
-                        h1 대한민국 대사관
-                        span LEARN MORE 
+    include partials/workingtip
     include partials/ad
     div#working
         div.community
