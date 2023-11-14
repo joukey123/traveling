@@ -272,8 +272,6 @@ function paintCalender() {
 
     // arr = arr + " " + i;
   }
-
-  console.log(year, month, date, day);
   // console.log(arr);
   for (c; c <= 6 - lastday; c++) {
     const last_li = document.createElement("li");
@@ -297,10 +295,12 @@ function preMonth() {
 
 const handleCloseProductDetail = () => {
   const selectProduct = document.getElementById("selectProduct");
-  const reserveBox = document.getElementById("reserveBox");
   selectProduct.remove();
   reset();
+  resetHtml();
+  currentDay = new Date(); //닫은 후 클릭 시 달력날짜 초기화
 };
+
 function handleShowProductDetail() {
   const closeBtn = document.createElement("button");
   closeBtn.innerText = "X";
@@ -329,6 +329,9 @@ function handleShowProductDetail() {
 function reset() {
   monthTitle.innerHTML = "";
   calenderTable.innerHTML = "";
+}
+
+const resetHtml = () => {
   adultDiv.innerHTML = "";
   childDiv.innerHTML = "";
   resultPay.innerHTML = "";
@@ -337,7 +340,7 @@ function reset() {
   totalPrice = 0;
   reservePrice.innerText = "";
   reserveDate.innerText = "";
-}
+};
 
 for (let product of products) {
   product.addEventListener("click", handleShowProductDetail);
