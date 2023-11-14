@@ -7,8 +7,8 @@ block contents
         div.recVideo
             h1.title 추천 영상
             div.revVideoList
-                //- each video in videos
-                //-     +video(video)
+                each video in videos
+                    +video(video)
             button.moreBtn 더보기
         div.userTravel
             h1.title 여행 후기

@@ -48,11 +48,13 @@ const handleHidePrevBtn = () => {
 //메인배너 롤링
 const handleMainBannerImges = () => {
   for (let mainBannerImge of mainBannerImges) {
+    mainBannerImge.style.opacity = 0;
     mainBannerImge.style.transform = "translate(-100%,0)";
   } //배너 이미지 초기화
   for (let bannerCircle of bannerCircles) {
     bannerCircle.style.transform = "";
   } //배너 하단 원 초기화
+  mainBannerImges[imgNumber].style.opacity = 1;
   mainBannerImges[imgNumber].style.transform = "translate(0,0%)";
   bannerCircles[imgNumber].style.transform = "scale(1.5)";
 };
