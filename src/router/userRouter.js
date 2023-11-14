@@ -1,8 +1,8 @@
 import express from "express";
-import { user } from "../controller/userController";
+import { logout } from "../controller/userController";
 
 const userRouter = express.Router();
 
-userRouter.get("/", user);
+userRouter.get("/logout", logout);
 
 export default userRouter;

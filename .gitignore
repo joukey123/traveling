@@ -1,5 +1,7 @@
 /node_modules
 /img
+/assets
+.env
 src/.DS_Store
 .DS_Store
-/assets
+/build

@@ -3,8 +3,6 @@ const path = require("path");
 
 const BASE_JS = "./src/client/js/";
 module.exports = {
-  mode: "development",
-  watch: true,
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/styles.css",
@@ -14,6 +12,7 @@ module.exports = {
     main: BASE_JS + "main.js",
     travel: BASE_JS + "travel.js",
     together: BASE_JS + "together.js",
+    join: BASE_JS + "join.js",
     city: BASE_JS + "city.js",
   },
   output: {
